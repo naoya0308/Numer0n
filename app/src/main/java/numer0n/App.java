@@ -3,15 +3,9 @@
  */
 package numer0n;
 
-import numer0n.factory.service.GameManagerFactory;
-import numer0n.service.GameManager;
-
 public class App {
 
     public static void main(String[] args) {
-        GameManager gameManager = GameManagerFactory.create();
-
         // ゲームを開始
-        gameManager.start();
     }
 }
