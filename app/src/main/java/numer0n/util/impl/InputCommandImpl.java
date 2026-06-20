@@ -12,7 +12,11 @@ public class InputCommandImpl implements InputCommand {
 
     private boolean isError;
 
+    private Scanner scanner;
+
     public InputCommandImpl() {
+        this.scanner = new Scanner(System.in);
+
         this.reset();
     }
 
@@ -35,12 +39,10 @@ public class InputCommandImpl implements InputCommand {
     public void input(String message) {
         this.reset();
 
-        Scanner scanner = new Scanner(System.in);
-
         while (true) {
             System.out.print(message);
 
-            this.text = scanner.nextLine();
+            this.text = this.scanner.nextLine();
 
             this.validateText();
 
